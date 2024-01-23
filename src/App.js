@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
+import Greet from './Components/Greet'
+import Welcome from './Components/Welcome'
+import Hello from './Components/Hello'
+import Message from './Components/Message'
+import Counter from './Components/Counter'
 
-function App() {
+class App extends Component {
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Hello World
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter/>
+      <Welcome name="mrunu"/>
+    {/*<Message/>
+    <Greet fname="mrunali" lname="salunke"/>
+    <Greet fname="mrudula" lname="patil"/>
+    <Greet fname="minal" lname="patil"/>
+    <Welcome name="mrunu"/>
+    <Hello/>*/}
     </div>
   );
+  }
 }
 
 export default App;
