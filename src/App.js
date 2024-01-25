@@ -24,12 +24,47 @@ import ParentComp from './Components/ParentComp';
 import RefsDemo from './Components/RefsDemo';
 import FocusInput from './Components/FocusInput';
 import FRParentInput from './Components/FRParentInput';
+import PortalDemo from './Components/PortalDemo';
+import Hero from './Components/Hero';
+import ErrorBoundary from './Components/ErrorBoundary'
+import ClickCounter from './Components/ClickCounter';
+import HoverCounter from './Components/HoverCounter';
+import ClickCounterTwo from './Components/ClickCounterTwo';
+import HoverCounterTwo from './Components/HoverCounterTwo';
+import User from './Components/User';
+import CounterOne from './Components/CounterOne';
+import ComponentC from './Components/ComponentC'
+import { UserProvider } from './Components/userContext';
 class App extends Component {
   render(){
   return (
     <div className="App">
+      <UserProvider value="mrunu">
+     <ComponentC/>
+     </UserProvider>
+         {/*<Message/>
+          <CounterOne 
+      render={(count,incrementCount)=>(
+        <ClickCounterTwo count={count} incrementCount={incrementCount}/>
+      )}/>
+
+      <CounterOne 
+      render={(count,incrementCount)=>(
+        <HoverCounterTwo count={count} incrementCount={incrementCount}/>
+      )}/>
+         <User render= {(isLoggedIn)=> isLoggedIn?'mrunu':'' }/>
+          <ClickCounterTwo/>
+      <HoverCounterTwo/>
+         <ClickCounter/>
+      <HoverCounter/>
+      <PortalDemo/>
+       <ErrorBoundary>
+    <Hero heroName='manu' />
+      </ErrorBoundary>
+      <ErrorBoundary>
+     <Hero heroName='joker' />
+    </ErrorBoundary>
     <FRParentInput/>
-      {/*<Message/>
       <FocusInput/>
       <RefsDemo/>
       <ParentComp/>
